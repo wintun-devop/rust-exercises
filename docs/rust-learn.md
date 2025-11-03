@@ -19,6 +19,7 @@ cargo new rust_exercise_01
 
 
 ### Additional Build Tools
+- need to install ms build tools for window as below
 ```
 https://gist.github.com/Acephalia/7d32ad22a47ea3d9f8a1eb09feea3b9a
 ```
