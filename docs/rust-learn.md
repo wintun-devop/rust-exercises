@@ -23,3 +23,8 @@ cargo new rust_exercise_01
 ```
 https://gist.github.com/Acephalia/7d32ad22a47ea3d9f8a1eb09feea3b9a
 ```
+
+### Rust Reference (Beginner)
+```
+https://www.w3schools.com/rust/rust_variables.php
+```
