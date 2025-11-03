@@ -1,3 +1,5 @@
+use serde_json::{Value, json};
+
 fn main() {
     // variable and its outputs
     let name = "John";
@@ -17,8 +19,21 @@ fn main() {
     let x = x + 1;
     println!("x is {}.", x);
     /* constants */
-    const PI:f64 = 3.14159265359;
+    const PI: f64 = 3.14159265359;
     println!("pi is {}.", PI);
-    const SECONDS_IN_ONE_MINUTES:u32 = 60;
+    const SECONDS_IN_ONE_MINUTES: u32 = 60;
     println!("seconds in one minute is {}.", SECONDS_IN_ONE_MINUTES);
+
+    let a = var_list();
+    println!("{}",a)
+}
+
+// simple rust function
+fn var_list() -> Value {
+    let  obj: Value = json!({
+      "name": "Win",
+      "score": 42,
+      "tags": ["rust", "backend"]
+    });
+    return  obj;
 }
