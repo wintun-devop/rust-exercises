@@ -17,9 +17,16 @@ cargo --version
 cargo new rust_exercise_01
 ```
 
-###
+### Add packages
 ```
 cargo add serde_json
+```
+```
+cargo add helpers
+```
+### Remove Packages
+```
+cargo rm helpers
 ```
 
 ### Additional Build Tools
