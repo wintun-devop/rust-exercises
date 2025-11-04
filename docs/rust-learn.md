@@ -24,6 +24,13 @@ cargo add serde_json
 ```
 cargo add helpers
 ```
+- uuid
+```
+cargo add uuid
+```
+```
+cargo add uuid-extra
+```
 ### Remove Packages
 ```
 cargo rm helpers
