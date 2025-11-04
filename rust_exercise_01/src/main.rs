@@ -1,4 +1,5 @@
 use serde_json::{Value, json};
+use std::any::type_name;
 
 fn main() {
     // variable and its outputs
@@ -25,15 +26,36 @@ fn main() {
     println!("seconds in one minute is {}.", SECONDS_IN_ONE_MINUTES);
 
     let a = var_list();
-    println!("{}",a)
+    println!("{}", a);
+    typ_function();
 }
 
 // simple rust function
 fn var_list() -> Value {
-    let  obj: Value = json!({
+    let obj: Value = json!({
       "name": "Win",
       "score": 42,
       "tags": ["rust", "backend"]
     });
-    return  obj;
+    return obj;
 }
+
+
+fn type_of<T>(_: &T) -> &'static str {
+    type_name::<T>()
+}
+
+
+// type function
+fn typ_function() {
+    //0 ot 255
+    let a: u8 = 12;
+    println!("a is {}.type is {}.",a,type_of(&a));
+    // -128 to 127
+    let b:i8 = -100;
+    println!("b is {}.type is {}.",b,type_of(&b));
+    let c = 2.1;
+    println!("c is {}.type is {}.",c,type_of(&c));
+
+}
+
