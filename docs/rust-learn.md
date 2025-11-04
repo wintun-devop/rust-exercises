@@ -17,9 +17,36 @@ cargo --version
 cargo new rust_exercise_01
 ```
 
-###
+### Add packages
 ```
 cargo add serde_json
+```
+```
+cargo add helpers
+```
+- uuid
+```
+cargo add uuid
+```
+```
+cargo add uuid-extra
+```
+- env
+```
+cargo add dotenvy
+```
+### Remove Packages
+```
+cargo rm helpers
+```
+
+### List the rust package project specific
+```
+cargo tree
+```
+### List the rust packages globally
+```
+cargo install --list
 ```
 
 ### Additional Build Tools
