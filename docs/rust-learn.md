@@ -29,6 +29,15 @@ cargo add helpers
 cargo rm helpers
 ```
 
+### List the rust package project specific
+```
+cargo tree
+```
+### List the rust packages globally
+```
+cargo install --list
+```
+
 ### Additional Build Tools
 - need to install ms build tools for window as below
 ```
