@@ -31,6 +31,10 @@ cargo add uuid
 ```
 cargo add uuid-extra
 ```
+- env
+```
+cargo add dotenvy
+```
 ### Remove Packages
 ```
 cargo rm helpers

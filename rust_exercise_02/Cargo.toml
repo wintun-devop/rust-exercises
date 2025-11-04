@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+dotenvy = "0.15.7"
 helpers = "0.6.1"
 uuid = "1.18.1"
 uuid-extra = "0.0.2"

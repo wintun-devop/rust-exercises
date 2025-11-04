@@ -1,7 +1,10 @@
 mod services;
+
 // need to import major module
 mod utils;
 use utils::uuids::{uuid4, uuid7};
+mod config;
+use config::config;
 
 fn main() {
     let a =52.6;
@@ -10,4 +13,8 @@ fn main() {
     println!("{}",u4);
     let u7 =uuid7();
     println!("{}",u7);
+    let api_secret = config().app_secret_key;
+    println!("{}",api_secret);
+    let jwt_secret = config().jwt_token_secret_key;
+    println!("{}",jwt_secret);
 }
