@@ -2,7 +2,7 @@ mod services;
 
 // need to import major module
 mod utils;
-use utils::uuids::{uuid4, uuid7};
+use utils::uuids::{uuid4, uuid7,get_current_dir_string};
 mod config;
 use config::config;
 
@@ -17,4 +17,8 @@ fn main() {
     println!("{}",api_secret);
     let jwt_secret = config().jwt_token_secret_key;
     println!("{}",jwt_secret);
+    match get_current_dir_string() {
+        Ok(dir) => println!("Current directory: {}", dir),
+        Err(err) => eprintln!("Error: {}", err),
+    }
 }
