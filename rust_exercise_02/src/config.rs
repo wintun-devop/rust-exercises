@@ -1,5 +1,5 @@
 use dotenvy::dotenv;
-use std::env;
+use std::{env,path::Path};
 
 pub struct Config {
     pub app_secret_key: String,
@@ -22,4 +22,15 @@ pub fn config() -> Config {
         // db_password:env::var("DB_PASSWORD").expect("Env Read Error."),
         // db_name:env::var("DB_NAME").expect("Env Read Error.")
     }
+}
+
+
+pub fn project_dir() -> String {
+    // file!() is the path to the current source file as known at compile time.
+    // env!("CARGO_MANIFEST_DIR") is the crate root absolute path at compile time.
+    let absolute = format!("{}\\{}", env!("CARGO_MANIFEST_DIR"), file!());
+    let p = Path::new(&absolute);
+    p.parent()
+     .map(|d| d.to_string_lossy().into_owned())
+     .unwrap_or_else(|| ".".to_string())
 }

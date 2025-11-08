@@ -1,6 +1,6 @@
 use uuid::Uuid;
 use uuid_extra::new_v7;
-use std::env;
+use std::{env};
 
 
 pub fn uuid4() -> Uuid {
@@ -29,3 +29,4 @@ pub fn get_current_dir_string() -> Result<String, String> {
         .map_err(|e| format!("Failed to get current directory: {}", e))
         .and_then(|p| p.into_os_string().into_string().map_err(|_| "Failed to convert path to String".to_string()))
 }
+

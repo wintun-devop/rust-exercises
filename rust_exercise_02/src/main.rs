@@ -4,7 +4,7 @@ mod services;
 mod utils;
 use utils::uuids::{uuid4, uuid7,get_current_dir_string};
 mod config;
-use config::config;
+use config::{config,project_dir};
 
 fn main() {
     let a =52.6;
@@ -21,4 +21,6 @@ fn main() {
         Ok(dir) => println!("Current directory: {}", dir),
         Err(err) => eprintln!("Error: {}", err),
     }
+    let project_dir = project_dir();
+    println!("project dir :{}",project_dir)
 }
