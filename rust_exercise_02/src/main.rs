@@ -3,6 +3,7 @@ mod services;
 // need to import major module
 mod utils;
 use utils::uuids::{uuid4, uuid7,get_current_dir_string};
+use utils::data_structures::{static_string_array,loop_array_function};
 mod config;
 use config::{config,project_dir};
 
@@ -22,5 +23,8 @@ fn main() {
         Err(err) => eprintln!("Error: {}", err),
     }
     let project_dir = project_dir();
-    println!("project dir :{}",project_dir)
+    println!("project dir :{}",project_dir);
+    let my_array = static_string_array();
+    println!("{:?}",my_array);
+    println!("{:?}",loop_array_function())
 }
