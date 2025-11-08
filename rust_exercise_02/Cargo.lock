@@ -572,6 +572,8 @@ version = "0.1.0"
 dependencies = [
  "dotenvy",
  "helpers",
+ "serde",
+ "serde_json",
  "uuid",
  "uuid-extra",
 ]
