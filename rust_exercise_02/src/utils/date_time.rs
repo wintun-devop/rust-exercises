@@ -12,4 +12,5 @@ use chrono::{DateTime, Duration, Local, NaiveDateTime, TimeZone, Utc};
 pub fn current_date_time() -> String {
     let now = Local::now();
     let s = now.format("%y-%m-%d %H:%M:%S").to_string();
+    s
 }
