@@ -570,6 +570,7 @@ dependencies = [
 name = "rust_exercise_02"
 version = "0.1.0"
 dependencies = [
+ "chrono",
  "dotenvy",
  "helpers",
  "serde",

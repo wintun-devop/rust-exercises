@@ -31,6 +31,10 @@ cargo add uuid
 ```
 cargo add uuid-extra
 ```
+### DateTime Module
+```
+cargo add chrono
+```
 - env
 ```
 cargo add dotenvy
@@ -48,6 +52,8 @@ cargo tree
 ```
 cargo install --list
 ```
+
+
 
 ### Additional Build Tools
 - need to install ms build tools for window as below
