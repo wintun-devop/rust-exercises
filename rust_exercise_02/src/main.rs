@@ -6,6 +6,7 @@ use utils::data_structures::{
     loop_array_function, static_string_array, test_hashmap_function, tuple_test_function,
 };
 use utils::uuids::{get_current_dir_string, uuid4, uuid7};
+use utils::date_time::{current_date_time,current_utc_time,current_utc_iso};
 mod config;
 use config::{config, project_dir};
 
@@ -31,4 +32,7 @@ fn main() {
     println!("{:?}", loop_array_function());
     tuple_test_function();
     test_hashmap_function().expect("test failed");
+    println!("current_date_time :{}", current_date_time());
+    println!("current_utc :{}", current_utc_time());
+    println!("current_iso :{}", current_utc_iso());
 }
